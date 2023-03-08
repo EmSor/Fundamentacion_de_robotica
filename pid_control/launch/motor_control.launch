@@ -3,6 +3,7 @@
     <rosparam file = "$(find pid_control)/config/system_params.yaml" command = "load"  />
     <rosparam file = "$(find pid_control)/config/control_params.yaml" command = "load"  />
     <rosparam file = "$(find pid_control)/config/setpoint_params.yaml" command = "load"  />
+    
     <node name="system" pkg="pid_control" type="system.py" output="screen"/>
     <node name="controller" pkg="pid_control" type="controller.py" output="screen"/>
     <node name="set_point_generator" pkg="pid_control" type="set_point_generator.py" output="screen"/>
